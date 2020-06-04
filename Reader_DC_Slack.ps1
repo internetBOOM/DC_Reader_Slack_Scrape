@@ -57,5 +57,5 @@ $block = @("[
 If ([version]$newVer -gt [version]$curVer -or $null -eq $current)
 {
     Invoke-WebRequest -Method POST -Uri  $uri -Body "{`"blocks`":$block}" -ContentType 'application/json'
-    $adobeVer[0] | Out-File $versionFile -Force
+    $adobeVer[0] | Out-File $fullFile -Force
 }
