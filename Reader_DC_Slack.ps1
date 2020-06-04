@@ -19,7 +19,7 @@ $uri =
 $fullFile = $filepath + $fileName
 if (!(Test-Path -Path $fullFile))
 {
-    New-Item -Path
+    New-Item -Path $filePath -Type File -Name $fileName
 }
 
 $adobe = Invoke-WebRequest "https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html#AcrobatDCandAcrobatReaderDCContinuousTrackreleasenotes"
